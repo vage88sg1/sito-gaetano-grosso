@@ -1,0 +1,12 @@
+# Materiali sorgente del brand e handoff di design (non parte del sito pubblicato)
+_sources/
+
+# Config locale di sviluppo / preview
+.claude/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Documenti di lavoro interni (non fanno parte del sito pubblicato)
+DOMANDE-AL-CLIENTE.*

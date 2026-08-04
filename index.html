@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!--
+  SITO VETRINA — DOTT. GAETANO GROSSO · Studio cardiologico, Belvedere Marittimo (CS)
+  Design system: design_handoff_sito_vetrina (palette "Acqua chiara", Newsreader + IBM Plex Sans/Mono).
+  Regole del sistema rispettate: nessun raggio, nessuna ombra, nessun gradiente decorativo,
+  nessuna animazione (solo transizioni di colore 120ms).
+  Impiego del colore: accento = interazione, inchiostro = struttura, tinta una volta sola.
+  Nessuna prenotazione online, nessun modulo, nessun cookie: i contatti sono telefono ed email.
+  Contenuti compilati con i dati forniti dallo studio. Restano da inserire le due fotografie
+  (ritratto in studio e ritratto del medico): cercare "Sostituire con" nel file.
+-->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)</title>
+<meta name="description" content="Studio privato del Dott. Gaetano Grosso, medico chirurgo specialista in Cardiologia e Nefrologia. Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sopraortici nello stesso appuntamento. Belvedere Marittimo (CS) e Saracena (CS). Appuntamenti per telefono.">
+<!-- Anteprima su GitHub Pages: esclusa dai motori di ricerca.
+     Rimuovere questo meta e il Disallow in robots.txt alla pubblicazione sul dominio definitivo. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#37545C">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)">
+<meta property="og:description" content="Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sopraortici nello stesso appuntamento. Referto cartaceo consegnato al termine della visita.">
+<meta property="og:url" content="https://www.dottorgaetanogrosso.it/">
+<link rel="canonical" href="https://www.dottorgaetanogrosso.it/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="assets/logo/lockup-orizzontale.png?v=1">
+
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png?v=2">
+<link rel="apple-touch-icon" href="assets/logo/favicon-180.png?v=2">
+
+<!-- Preload dei pesi realmente visibili subito -->
+<link rel="preload" href="assets/fonts/Newsreader-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Newsreader-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexMono-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Font del brand: self-hosted (GDPR-friendly, nessun contatto con Google) — vedi assets/fonts/fonts.css -->
+<style>
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/Newsreader-normal-300-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/Newsreader-normal-300-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/Newsreader-normal-400-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/Newsreader-normal-400-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/IBMPlexSans-normal-300-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/IBMPlexSans-normal-300-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/IBMPlexSans-normal-400-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/IBMPlexSans-normal-400-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/IBMPlexSans-normal-500-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/IBMPlexSans-normal-500-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/IBMPlexMono-normal-400-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/IBMPlexMono-normal-400-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/IBMPlexMono-normal-500-latin-ext.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/IBMPlexMono-normal-500-latin.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+</style>
+
+<style>
+  /* ——— TOKENS (design_handoff_sito_vetrina/tokens.css) ——— */
+  :root{
+    /* Impiego del colore (più sobrio dell'handoff, che tinge tutto il fondo pagina):
+       fondo bianco da documento, la tinta compare una volta sola nella fascia recapiti
+       e nelle fasce alternate al tono più pallido. Accento = interazione; inchiostro = struttura. */
+    --bg-page:#FFFFFF; --bg-surface:#E4F2F6; --bg-card:#FFFFFF; --bg-band:#F5FBFC;
+    --accent:#2B9AA6; --accent-dark:#1A6F7C; --accent-light:#8FDCE4;
+    --ink:#37545C; --text:#12222A; --text-secondary:#3F545C; --text-muted:#66777E;
+    --line:#E3F0F4; --line-strong:#C9E2E8;
+    --accent-hover:#12545E; /* hover del pulsante primario */
+
+    --font-display:'Newsreader',Georgia,serif;
+    --font-text:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+    /* Scala alzata rispetto all'handoff: utenza adulta e anziana, lettura a distanza di braccio.
+       Corpo 18px (l'handoff indica 17 come minimo), interlinea 1.7, meta 13px. */
+    --fs-hero:50px; --fs-h2:34px; --fs-h3:25px; --fs-lead:20px;
+    --fs-body:18px; --fs-nav:16px; --fs-meta:13px; --fs-eyebrow:10px;
+
+    --space-2:8px; --space-3:14px; --space-4:22px;
+    --space-5:34px; --space-6:56px; --space-7:72px; --space-8:96px;
+
+    --radius:0px; --maxw:1200px; --pad-x:40px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
+  body{
+    font-family:var(--font-text);font-size:var(--fs-body);line-height:1.7;
+    color:var(--text);background:var(--bg-page);-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.15;letter-spacing:0}
+  img,svg{display:block;max-width:100%}
+  a{color:var(--accent-dark);text-decoration:underline;text-underline-offset:3px;transition:color .12s ease-out}
+  a:hover{color:var(--ink)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  ::selection{background:var(--accent-light);color:var(--text)}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--accent-dark);color:#fff;
+    padding:12px 20px;text-decoration:none;z-index:100}
+  .skip:focus{left:0}
+
+  /* ——— TIPOGRAFIA DI SERVIZIO ———
+     Occhielli in Plex Sans maiuscoletto (non in monospaziato): registro istituzionale.
+     Il monospaziato resta riservato ai dati — recapiti, orari, durate — come da handoff. */
+  .meta{font-family:var(--font-text);font-weight:500;font-size:var(--fs-meta);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink)}
+  .meta-muted{color:var(--text-muted)}
+  /* Sulle superfici tinte il grigio chiaro non arriva ad AA: si scende di un tono */
+  .band .meta-muted,.quickbar .meta-muted,
+  .band .hint,.quickbar .hint,
+  .band .hours th{color:var(--text-secondary)}
+  .lead{font-size:var(--fs-lead);line-height:1.6;color:var(--text-secondary);max-width:46ch}
+  .tabular{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+
+  /* ——— PULSANTI ——— */
+  .btn{display:inline-flex;align-items:center;justify-content:center;
+    font-family:var(--font-text);font-size:var(--fs-nav);font-weight:500;line-height:1.2;
+    padding:14px 26px;border:1px solid transparent;border-radius:var(--radius);
+    text-decoration:none;cursor:pointer;white-space:nowrap;
+    transition:background-color .12s ease-out,color .12s ease-out,border-color .12s ease-out}
+  .btn-primary{background:var(--accent-dark);color:#FFFFFF}
+  .btn-primary:hover{background:var(--accent-hover);color:#FFFFFF}
+  .btn-secondary{background:transparent;border-color:var(--line-strong);color:var(--text);font-weight:400}
+  .btn-secondary:hover{border-color:var(--accent);color:var(--accent-dark)}
+  .btn-sm{font-size:14px;padding:11px 20px}
+
+  /* ——— TESTATA ——— */
+  header{position:sticky;top:0;z-index:50;background:var(--bg-card);border-bottom:1px solid var(--line-strong)}
+  .nav-bar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-5);padding:22px 0}
+  .lockup{display:flex;align-items:center;gap:var(--space-3);white-space:nowrap;text-decoration:none}
+  .lockup:hover{color:inherit}
+  .lockup .mono-mark{width:78px;height:auto;flex:none}
+  .lockup-txt{display:flex;flex-direction:column;gap:3px}
+  .lockup-eyebrow{font-size:9px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--accent-dark)}
+  .lockup-name{font-family:var(--font-display);font-weight:300;font-size:21px;line-height:1.05;color:var(--ink)}
+  .nav{display:flex;align-items:center;gap:var(--space-5)}
+  /* :not(.btn) — le regole delle voci non devono toccare padding e colore del pulsante */
+  .nav a:not(.btn){font-size:var(--fs-nav);color:var(--text-secondary);text-decoration:none;
+    padding-bottom:2px;border-bottom:1px solid transparent}
+  .nav a:not(.btn):hover{color:var(--ink)}
+  .nav a:not(.btn)[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+  .nav-toggle,.nav-phone{display:none}
+  .nav-toggle{background:transparent;border:1px solid var(--line-strong);color:var(--text);
+    font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    padding:12px 16px;min-height:44px;cursor:pointer;transition:border-color .12s ease-out,color .12s ease-out}
+  .nav-toggle:hover{border-color:var(--accent);color:var(--accent-dark)}
+  .nav-toggle .ico{display:none;width:18px;height:18px}
+  .nav-phone .ico{display:none;width:18px;height:18px}
+
+  /* ——— MARCHIO (monogramma GG, ricomposto in HTML) ——— */
+  .mono-mark .mm-ring,.mono-mark .mm-beat{stroke:var(--ink)}
+  .mono-mark .mm-inner{stroke:var(--accent)}
+  .mono-mark--neg .mm-ring,.mono-mark--neg .mm-beat{stroke:#FFFFFF}
+  .mono-mark--neg .mm-inner{stroke:var(--accent-light)}
+
+  /* ——— SEZIONI ——— */
+  section{padding:var(--space-8) 0}
+  /* Le fasce si distinguono per filetto, non per stacco di colore */
+  .band{background:var(--bg-band);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  /* Filetto sopra il titolo: impaginazione da documento, non da rivista */
+  .section-head{display:flex;flex-direction:column;gap:var(--space-3);max-width:64ch;
+    border-top:1px solid var(--line-strong);padding-top:var(--space-4);margin-bottom:var(--space-6)}
+  .section-head h2{font-size:var(--fs-h2)}
+
+  /* ——— HERO ——— */
+  .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:var(--space-6);
+    padding:64px 0 var(--space-7);align-items:center}
+  .hero-col{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+  .hero h1{font-weight:400;font-size:var(--fs-hero);line-height:1.12;letter-spacing:-.005em;color:var(--text)}
+  .hero-actions{display:flex;gap:var(--space-3);flex-wrap:wrap}
+  /* Segnaposto del ritratto: campitura piena, sostituire con <img> della foto reale (vedi README) */
+  .portrait{height:340px;border:1px solid var(--line-strong);background:var(--bg-surface);
+    display:flex;align-items:center;justify-content:center}
+  .portrait span{font-size:15px;color:var(--text-muted)}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+
+  /* ——— FASCIA RECAPITI (subito sotto la hero: ciò che serve davvero al paziente) ——— */
+  .quickbar{background:var(--bg-surface);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  .quickbar-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .quick{display:flex;flex-direction:column;gap:6px;padding:var(--space-4) var(--space-5);
+    border-left:1px solid var(--line-strong)}
+  .quick:first-child{border-left:0;padding-left:0}
+  .quick .v{font-family:var(--font-mono);font-size:22px;font-variant-numeric:tabular-nums;color:var(--text)}
+  .quick .v a{text-decoration:none}
+  .quick .v a:hover{text-decoration:underline}
+  .quick .hint{font-size:16px;color:var(--text-secondary)}
+
+  /* ——— PRESTAZIONI: prospetto unico, impaginato come un documento ——— */
+  .svc{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  .svc-row{display:grid;grid-template-columns:minmax(240px,1.1fr) 2fr minmax(120px,auto);
+    gap:var(--space-4) var(--space-6);align-items:baseline;padding:var(--space-5) 0;
+    border-top:1px solid var(--line-strong)}
+  .svc-row:first-child{border-top:0}
+  .svc-row h3{font-size:var(--fs-h3)}
+  .svc-row p{color:var(--text-secondary)}
+  .svc-dur{font-family:var(--font-mono);font-size:16px;font-variant-numeric:tabular-nums;
+    color:var(--text-secondary);text-align:right;white-space:nowrap}
+  .svc-list{list-style:none;margin-top:10px;display:grid;gap:6px}
+  .svc-list li{position:relative;padding-left:var(--space-4);color:var(--text-secondary)}
+  .svc-list li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:1px;background:var(--ink)}
+
+  /* ——— SVOLGIMENTO DELLA VISITA: sequenza verticale, non colonne da scandire ——— */
+  .protocol{list-style:none;border-top:1px solid var(--line-strong)}
+  .protocol li{display:grid;grid-template-columns:72px 1fr;gap:var(--space-4);
+    padding:var(--space-4) 0;border-bottom:1px solid var(--line-strong)}
+  .protocol .num{font-family:var(--font-display);font-weight:400;font-size:32px;line-height:1.2;color:var(--ink)}
+  .protocol h3{font-size:21px;margin-bottom:4px}
+  .protocol p{color:var(--text-secondary);max-width:70ch}
+  .note{background:var(--bg-card);border-left:3px solid var(--ink);
+    padding:var(--space-4) var(--space-5);margin-top:var(--space-6);color:var(--text-secondary)}
+
+  /* ——— IL MEDICO: testo a sinistra, ritratto e dati a destra ——— */
+  .medico{display:grid;grid-template-columns:1fr 340px;gap:var(--space-6);align-items:start}
+  .medico .portrait{height:340px}
+  .cv{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-4)}
+  .cv li{position:relative;padding-left:var(--space-4);color:var(--text-secondary)}
+  .cv li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:1px;background:var(--ink)}
+  .facts{border:1px solid var(--line-strong);background:var(--bg-band);padding:var(--space-4) var(--space-5);
+    margin-top:var(--space-4);display:grid;gap:var(--space-3)}
+  .facts div{display:flex;flex-direction:column;gap:2px}
+  .facts dt{font-size:var(--fs-meta);font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+  .facts dd{font-size:17px;color:var(--text)}
+  .strumenti{margin-top:var(--space-6);border-top:1px solid var(--line-strong);padding-top:var(--space-4);
+    display:grid;grid-template-columns:minmax(240px,1fr) 2fr;gap:var(--space-4) var(--space-6)}
+  .strumenti h3{font-size:var(--fs-h3)}
+  .strumenti p{color:var(--text-secondary)}
+
+  /* ——— DOMANDE FREQUENTI: risposte sempre visibili, nessun accordion ——— */
+  .faq{border-top:1px solid var(--line-strong)}
+  .faq-item{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:var(--space-4) var(--space-6);
+    padding:var(--space-4) 0;border-bottom:1px solid var(--line-strong)}
+  .faq-item h3{font-size:21px}
+  .faq-item p{color:var(--text-secondary);max-width:70ch}
+
+  /* ——— CONTATTI: due pannelli d'azione, orari in tabella, indirizzo e mappa ——— */
+  .contact-panels{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+  .panel{background:var(--bg-card);border:1px solid var(--line-strong);padding:var(--space-5);
+    display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start}
+  .panel .v{font-family:var(--font-mono);font-size:26px;font-variant-numeric:tabular-nums;
+    color:var(--text);word-break:break-word}
+  .panel .hint{font-size:16px;color:var(--text-muted)}
+  .panel .btn{margin-top:auto}
+  .contact-mail{background:var(--bg-card);border:1px solid var(--line-strong);
+    padding:var(--space-4) var(--space-5);margin-top:var(--space-4);
+    display:flex;flex-direction:column;gap:6px}
+  .contact-mail .v{font-family:var(--font-mono);font-size:22px;color:var(--text);word-break:break-word}
+  .contact-mail .v a{text-decoration:none}
+  .contact-mail .v a:hover{text-decoration:underline}
+  .contact-mail .hint{font-size:16px;color:var(--text-muted);max-width:80ch}
+  .contact-details{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);
+    margin-top:var(--space-6);align-items:start}
+  .sedi{display:grid;gap:var(--space-5)}
+  .sede{border-top:1px solid var(--line-strong);padding-top:var(--space-3)}
+  .sede h3{font-size:21px;margin-bottom:8px}
+  .sede p{color:var(--text-secondary);font-size:17px}
+  .sede .v{font-family:var(--font-mono);font-size:17px;color:var(--text);margin-bottom:6px}
+  .hours{width:100%;border-collapse:collapse;margin-top:var(--space-3)}
+  .hours th{text-align:left;font-size:var(--fs-meta);font-weight:500;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--text-muted);padding:0 0 10px}
+  .hours td{border-top:1px solid var(--line-strong);padding:12px 0;font-size:17px;color:var(--text-secondary)}
+  .hours td:last-child{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;color:var(--text)}
+
+  /* ——— FOOTER ——— */
+  footer{background:var(--ink);color:#FFFFFF;padding:var(--space-7) 0 var(--space-5)}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--space-6)}
+  .foot-col{display:flex;flex-direction:column;gap:var(--space-3)}
+  .foot-col h2{font-family:var(--font-text);font-size:var(--fs-meta);font-weight:500;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--accent-light)}
+  .foot-col p,.foot-col li{color:var(--bg-surface);font-size:17px}
+  .foot-col ul{list-style:none;display:grid;gap:var(--space-2)}
+  footer a{color:#FFFFFF;text-decoration:none}
+  footer a:hover{color:var(--accent-light)}
+  .foot-legal{border-top:1px solid rgba(255,255,255,.18);margin-top:var(--space-7);padding-top:var(--space-4);
+    display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-4);
+    font-size:15px;color:var(--line-strong)}
+  .foot-note{margin-top:var(--space-3);font-size:15px;color:var(--line-strong);max-width:80ch}
+  .foot-lockup{display:flex;align-items:center;gap:var(--space-3)}
+  .foot-lockup .mono-mark{width:64px;height:auto;flex:none}
+
+  /* ——— RESPONSIVE — breakpoint 1200 / 900 / 600 ——— */
+  @media (max-width:1199px){
+    :root{--fs-hero:42px}
+    .hero{gap:40px}
+  }
+  @media (max-width:899px){
+    :root{--pad-x:32px;--fs-hero:36px;--fs-h2:30px;--space-8:72px}
+    .nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+    .nav-phone{display:inline-flex;gap:8px}
+    .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+      align-items:stretch;gap:0;background:var(--bg-card);border-bottom:1px solid var(--line-strong);
+      padding:0 var(--pad-x) var(--space-4)}
+    header.nav-open .nav{display:flex}
+    .nav a:not(.btn){font-size:20px;padding:16px 0;min-height:44px;display:flex;align-items:center;
+      border-bottom:1px solid var(--line-strong)}
+    .nav a:not(.btn)[aria-current="true"]{border-bottom-color:var(--line);color:var(--accent-dark)}
+    .nav .btn{margin-top:var(--space-4);padding:16px 26px;font-size:17px}
+    .hero{grid-template-columns:1fr;gap:var(--space-5);padding:var(--space-6) 0}
+    .hero-portrait{order:-1}
+    .quickbar-grid{grid-template-columns:1fr}
+    .quick{border-left:0;border-top:1px solid var(--line-strong);padding:var(--space-4) 0}
+    .quick:first-child{border-top:0}
+    .svc-row{grid-template-columns:1fr;gap:10px;padding:var(--space-4) 0}
+    .svc-dur{text-align:left}
+    .protocol li{grid-template-columns:48px 1fr;gap:var(--space-3)}
+    .medico{grid-template-columns:1fr;gap:var(--space-5)}
+    .medico .portrait{height:320px;max-width:420px}
+    .strumenti{grid-template-columns:1fr;gap:10px}
+    .faq-item{grid-template-columns:1fr;gap:8px}
+    .contact-panels{grid-template-columns:1fr}
+    .contact-details{grid-template-columns:1fr;gap:var(--space-5)}
+    .foot-grid{grid-template-columns:1fr;gap:var(--space-5)}
+  }
+  @media (max-width:599px){
+    :root{--pad-x:24px;--fs-hero:30px;--fs-h2:26px;--fs-h3:22px;--fs-lead:17px}
+    /* La testata deve stare in una riga sola: lockup ridotto + due comandi quadrati da 44px */
+    .nav-bar{gap:10px;padding:16px 0}
+    .lockup{min-width:0;gap:10px}
+    .lockup .mono-mark{width:40px}
+    .lockup-eyebrow{display:none}
+    .lockup-txt{min-width:0}
+    .lockup-name{font-size:17px;overflow:hidden;text-overflow:ellipsis}
+    .nav-phone,.nav-toggle{flex:none;width:44px;height:44px;min-height:44px;padding:0}
+    .nav-phone .lbl,.nav-toggle .lbl{display:none}
+    .nav-phone .ico,.nav-toggle .ico{display:block}
+  }
+  /* Schermi molto stretti: il nome in testata resta intero, senza troncature */
+  @media (max-width:399px){
+    .nav-bar{gap:8px}
+    .lockup-name{font-size:15px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<header id="top">
+  <div class="wrap">
+    <div class="nav-bar">
+      <!-- Lockup orizzontale ricomposto in HTML: il nome resta testo selezionabile -->
+      <a class="lockup" href="#top" aria-label="Dott. Gaetano Grosso — Studio cardiologico, torna in cima">
+        <svg class="mono-mark" viewBox="36 5 131 100" fill="none" aria-hidden="true" width="131" height="100">
+          <g transform="translate(-18,0)">
+            <path class="mm-ring" d="M130 26 A40 44 0 1 0 130 84 L130 55" stroke-width="9.72" fill="none"/>
+            <path class="mm-inner" d="M117 40 A22 24 0 1 0 117 70 L117 55" stroke-width="4.59" fill="none"/>
+            <path class="mm-beat" d="M100 55 L138 55 L145 41 L152 71 L159 55 L180 55" stroke-width="6.75" fill="none"/>
+          </g>
+        </svg>
+        <span class="lockup-txt">
+          <span class="lockup-eyebrow">Studio cardiologico</span>
+          <span class="lockup-name">Dott. Gaetano Grosso</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigazione principale">
+        <a href="#prestazioni">Prestazioni</a>
+        <a href="#percorso">Percorso</a>
+        <a href="#studio">Studio</a>
+        <a href="#contatti">Contatti</a>
+        <a class="btn btn-primary btn-sm" href="#contatti">Prenota una visita</a>
+      </nav>
+
+      <!-- Su mobile: telefono sempre a portata di pollice + menu. Sotto i 600px restano due comandi da 44px. -->
+      <a class="btn btn-primary btn-sm nav-phone" href="tel:+39098582500" aria-label="Chiama lo studio">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6 3z"/></svg>
+        <span class="lbl">Chiama</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span class="lbl">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ——— HERO ——— -->
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-col">
+        <p class="meta">Studio cardiologico</p>
+        <h1>Una visita completa, in un solo appuntamento</h1>
+        <p class="lead">Gli esami strumentali, quando indicati, si eseguono direttamente in studio nel corso della visita. Il referto è consegnato in copia cartacea e illustrato al paziente.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contatti">Prenota una visita</a>
+          <a class="btn btn-secondary" href="#percorso">Svolgimento della visita</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <!-- Sostituire con: <img src="assets/img/ritratto-studio.webp" width="..." height="..." alt="Il Dott. Gaetano Grosso nel suo studio"> -->
+        <div class="portrait"><span>Ritratto in studio</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ——— FASCIA RECAPITI: telefono, orari e sede visibili senza scorrere ——— -->
+  <div class="quickbar">
+    <div class="wrap">
+      <div class="quickbar-grid">
+        <div class="quick">
+          <span class="meta meta-muted">Telefono</span>
+          <span class="v"><a href="tel:+39098582500">0985 82500</a></span>
+          <span class="hint">Risponde lo studio, Lun–Ven 15:30–19:30</span>
+        </div>
+        <div class="quick">
+          <span class="meta meta-muted">Orari dello studio</span>
+          <span class="v">Lun–Sab</span>
+          <span class="hint">Lun, Mar, Gio, Ven 15:30–20:00 · Mer e Sab 9:00–13:00</span>
+        </div>
+        <div class="quick">
+          <span class="meta meta-muted">Studio</span>
+          <span class="v">Via Sant’Antonio 20</span>
+          <span class="hint">Belvedere Marittimo (CS) · piano terra, senza barriere</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ——— PRESTAZIONI: prospetto unico, non griglia di riquadri ——— -->
+  <section id="prestazioni">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="meta">Prestazioni</p>
+        <h2>Prestazioni ambulatoriali</h2>
+        <p class="lead">Visita ed esami strumentali nello stesso appuntamento, eseguiti e refertati direttamente in studio. Nessuna prestazione richiede una preparazione particolare.</p>
+      </div>
+
+      <div class="svc">
+        <article class="svc-row">
+          <h3>Visita cardiologica</h3>
+          <div>
+            <p>Anamnesi, esame obiettivo e valutazione del rischio cardiovascolare, con gli esami strumentali eseguiti nel corso della stessa seduta:</p>
+            <ul class="svc-list">
+              <li>elettrocardiogramma</li>
+              <li>ecocardiogramma color-Doppler</li>
+              <li>ecocolordoppler dei tronchi sopraortici</li>
+            </ul>
+          </div>
+          <span class="svc-dur">40 min</span>
+        </article>
+        <article class="svc-row">
+          <h3>Monitoraggio Holter</h3>
+          <div>
+            <p>Registrazione dell’elettrocardiogramma o della pressione arteriosa nelle ventiquattro ore. Il tempo indicato è quello dell’applicazione dell’apparecchio; la lettura e il referto avvengono al momento del ritiro.</p>
+          </div>
+          <span class="svc-dur">15 min</span>
+        </article>
+        <article class="svc-row">
+          <h3>Visita di controllo</h3>
+          <div>
+            <p>Riservata ai pazienti già in carico allo studio: rivalutazione dei sintomi, degli esami eseguiti nel frattempo e della terapia in atto.</p>
+          </div>
+          <span class="svc-dur">30 min</span>
+        </article>
+        <article class="svc-row">
+          <h3>Certificazione per attività sportiva non agonistica</h3>
+          <div>
+            <p>Visita ed elettrocardiogramma a riposo per il rilascio del certificato previsto dalla normativa vigente. Non viene rilasciata la certificazione per l’attività agonistica.</p>
+          </div>
+          <span class="svc-dur">15 min</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— SVOLGIMENTO DELLA VISITA ——— -->
+  <section id="percorso" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="meta">Percorso</p>
+        <h2>Svolgimento della visita</h2>
+        <p class="lead">Un unico appuntamento, senza passaggi intermedi: al termine il paziente riceve il referto in copia cartacea e le indicazioni scritte.</p>
+      </div>
+
+      <ol class="protocol">
+        <li>
+          <span class="num">1</span>
+          <div>
+            <h3>Appuntamento</h3>
+            <p>Si fissa telefonicamente. È utile indicare il motivo della visita ed eventuali esami recenti.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <div>
+            <h3>Accoglienza</h3>
+            <p>All’arrivo il personale infermieristico raccoglie i dati anagrafici e prende in consegna la documentazione medica portata dal paziente.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <div>
+            <h3>Anamnesi e visita</h3>
+            <p>Raccolta della storia clinica e delle terapie in atto, esame obiettivo e misurazione della pressione arteriosa.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">4</span>
+          <div>
+            <h3>Esami strumentali</h3>
+            <p>Elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sopraortici, quando indicati, vengono eseguiti nel corso della stessa seduta.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">5</span>
+          <div>
+            <h3>Referto e indicazioni</h3>
+            <p>Il referto viene consegnato in copia cartacea al termine della visita e illustrato al paziente, con indicazioni scritte su terapia, esami ed eventuali controlli successivi. Su richiesta può essere trasmesso anche al medico curante.</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="note">Si raccomanda di portare la documentazione medica in proprio possesso, anche in copia, e l’elenco aggiornato dei farmaci assunti con i relativi dosaggi.</p>
+    </div>
+  </section>
+
+  <!-- ——— IL MEDICO E LO STUDIO ——— -->
+  <section id="studio">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="meta">Lo studio</p>
+        <h2>Dott. Gaetano Grosso</h2>
+        <p class="lead">Medico chirurgo, specialista in Cardiologia e Nefrologia.</p>
+      </div>
+
+      <div class="medico">
+        <div>
+          <ul class="cv">
+            <li>Laurea in Medicina e Chirurgia — Università di Pisa, 1981</li>
+            <li>Specializzazione in Nefrologia — Università di Pisa, 1984</li>
+            <li>Specializzazione in Cardiologia — Università Federico II di Napoli, 1992</li>
+            <li>Master in ecocardiografia da stress — Università di Pisa</li>
+            <li>Già responsabile del reparto di Cardiologia dell’Istituto Ninetta Rosano — Casa di cura Tricarico, Belvedere Marittimo</li>
+          </ul>
+        </div>
+        <div>
+          <!-- Sostituire con la fotografia del medico -->
+          <div class="portrait"><span>Ritratto del medico</span></div>
+          <dl class="facts">
+            <div><dt>Qualifica</dt><dd>Medico chirurgo</dd></div>
+            <div><dt>Specializzazioni</dt><dd>Cardiologia · Nefrologia</dd></div>
+            <div><dt>Ordine dei Medici</dt><dd>Cosenza — n. 3061</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="strumenti">
+        <h3>Dotazione strumentale</h3>
+        <p>Elettrocardiografo, ecocardiografo con sonda cardiologica e color-Doppler, apparecchio per l’ecocolordoppler dei tronchi sopraortici, registratori Holter elettrocardiografico e pressorio. Tutti gli esami sono eseguiti e refertati direttamente in studio, senza rinvii ad altre strutture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— DOMANDE FREQUENTI ——— -->
+  <section id="domande">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="meta">Informazioni</p>
+        <h2>Domande frequenti</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Serve l’impegnativa del medico di famiglia?</h3>
+          <p>No. Lo studio è privato e le prestazioni non sono erogate in convenzione con il Servizio sanitario nazionale: l’impegnativa non è necessaria.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Quando viene consegnato il referto?</h3>
+          <p>Al termine della visita, in copia cartacea, e illustrato al paziente. Su richiesta può essere trasmesso anche al medico curante.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Che cosa occorre portare?</h3>
+          <p>La documentazione medica in proprio possesso, anche in copia, e l’elenco aggiornato dei farmaci assunti con i relativi dosaggi.</p>
+        </div>
+        <div class="faq-item">
+          <h3>È possibile farsi accompagnare?</h3>
+          <p>Sì. In presenza di difficoltà motorie, di deficit uditivi o di terapie complesse è anzi consigliabile la presenza di un familiare o di chi assiste il paziente.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Come si disdice un appuntamento?</h3>
+          <p>Telefonando allo studio con almeno 24 ore di anticipo, così da rendere disponibile il posto ad altri pazienti.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Lo studio è accessibile?</h3>
+          <p>Sì. Lo studio di Belvedere Marittimo si trova al piano terra, senza barriere architettoniche, con parcheggio gratuito nelle immediate vicinanze.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— CONTATTI ——— -->
+  <section id="contatti" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="meta">Contatti</p>
+        <h2>Contatti e appuntamenti</h2>
+        <p class="lead">Gli appuntamenti si fissano telefonicamente: non è prevista la prenotazione online. Per lo studio di Saracena si telefona direttamente allo Studio Laurito.</p>
+      </div>
+
+      <div class="contact-panels">
+        <div class="panel">
+          <span class="meta meta-muted">Telefono dello studio</span>
+          <span class="v">0985 82500</span>
+          <p class="hint">Lunedì–Venerdì 15:30–19:30.</p>
+          <a class="btn btn-primary" href="tel:+39098582500">Chiama lo studio</a>
+        </div>
+        <div class="panel">
+          <span class="meta meta-muted">Cellulare</span>
+          <span class="v">335 8435336</span>
+          <p class="hint">Lunedì–Venerdì 15:30–19:30. Risponde direttamente il dottore.</p>
+          <a class="btn btn-secondary" href="tel:+393358435336">Chiama il cellulare</a>
+        </div>
+      </div>
+
+      <div class="contact-mail">
+        <span class="meta meta-muted">Posta elettronica</span>
+        <span class="v"><a href="mailto:gaetanogrosso@yahoo.it">gaetanogrosso@yahoo.it</a></span>
+        <p class="hint">Si prega di indicare nome, recapito telefonico e motivo della visita. Si raccomanda di non inserire dati clinici dettagliati: verranno raccolti in sede di visita.</p>
+      </div>
+
+      <div class="contact-details">
+        <div>
+          <h3>Orari dello studio</h3>
+          <table class="hours">
+            <thead>
+              <tr><th scope="col">Giorni</th><th scope="col" style="text-align:right">Orario</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Lunedì, martedì, giovedì e venerdì</td><td>15:30–20:00</td></tr>
+              <tr><td>Mercoledì e sabato</td><td>9:00–13:00</td></tr>
+              <tr><td>Domenica e festivi</td><td>chiuso</td></tr>
+            </tbody>
+          </table>
+          <p class="hint" style="margin-top:14px">Si riceve esclusivamente su appuntamento.<br>
+          Risposta telefonica: Lunedì–Venerdì 15:30–19:30.</p>
+        </div>
+
+        <div class="sedi">
+          <div class="sede">
+            <h3>Belvedere Marittimo</h3>
+            <p class="v">Via Sant’Antonio 20 — 87021 Belvedere Marittimo (CS)</p>
+            <p>Studi Medici, piano terra: nessuna barriera architettonica. Parcheggio gratuito.</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Sant%27Antonio%2020%2C%2087021%20Belvedere%20Marittimo%20CS">Apri le indicazioni stradali</a></p>
+          </div>
+          <div class="sede">
+            <h3>Saracena</h3>
+            <p class="v">Via Santa Maria Maddalena — 87010 Saracena (CS)</p>
+            <p>Il Dott. Grosso riceve anche presso lo Studio Laurito. I giorni di visita sono fissati direttamente dallo studio: per prenotare telefonare allo <a href="tel:+390981349369">0981 349369</a>, martedì 9:00–12:00 e mercoledì 15:30–18:00.</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Santa%20Maria%20Maddalena%2C%2087010%20Saracena%20CS">Apri le indicazioni stradali</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-lockup">
+          <svg class="mono-mark mono-mark--neg" viewBox="36 5 131 100" fill="none" aria-hidden="true" width="131" height="100">
+            <g transform="translate(-18,0)">
+              <path class="mm-ring" d="M130 26 A40 44 0 1 0 130 84 L130 55" stroke-width="11.16" fill="none"/>
+              <path class="mm-inner" d="M117 40 A22 24 0 1 0 117 70 L117 55" stroke-width="5.27" fill="none"/>
+              <path class="mm-beat" d="M100 55 L138 55 L145 41 L152 71 L159 55 L180 55" stroke-width="7.75" fill="none"/>
+            </g>
+          </svg>
+          <span class="lockup-txt">
+            <span class="lockup-eyebrow" style="color:var(--accent-light)">Studio cardiologico</span>
+            <span class="lockup-name" style="color:#FFFFFF">Dott. Gaetano Grosso</span>
+          </span>
+        </div>
+        <p>Medico chirurgo · specialista in Cardiologia e Nefrologia<br>Via Sant’Antonio 20, 87021 Belvedere Marittimo (CS)</p>
+      </div>
+
+      <div class="foot-col">
+        <h2>Contatti</h2>
+        <ul class="tabular">
+          <li><a href="tel:+39098582500">0985 82500</a></li>
+          <li><a href="tel:+393358435336">335 8435336</a></li>
+          <li><a href="mailto:gaetanogrosso@yahoo.it">gaetanogrosso@yahoo.it</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h2>Orari</h2>
+        <ul class="tabular">
+          <li>Lun, Mar, Gio, Ven 15:30–20:00</li>
+          <li>Mer e Sab 9:00–13:00</li>
+          <li>Domenica e festivi chiuso</li>
+        </ul>
+        <p style="font-size:15px;color:var(--line-strong)">Si riceve su appuntamento.</p>
+      </div>
+    </div>
+
+    <div class="foot-legal">
+      <span>© <span id="yr"></span> Dott. Gaetano Grosso</span>
+      <span>P. IVA 00517120788</span>
+      <span>Iscr. Ordine dei Medici di Cosenza n. 3061</span>
+      <span><a href="privacy.html">Privacy</a></span>
+    </div>
+    <p class="foot-note">Informazione sanitaria ai sensi della normativa vigente in materia di pubblicità sanitaria. Studio medico individuale.</p>
+  </div>
+</footer>
+
+<!-- Dati strutturati della sede principale. La seconda sede (Studio Laurito, Saracena) resta
+     solo nel testo: non è una filiale né una sotto-organizzazione dello studio, e modellarla
+     come tale in schema.org sarebbe una dichiarazione falsa. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dott. Gaetano Grosso — Studio cardiologico",
+  "medicalSpecialty": "Cardiovascular",
+  "url": "https://www.dottorgaetanogrosso.it/",
+  "telephone": "+39 0985 82500",
+  "email": "gaetanogrosso@yahoo.it",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Sant'Antonio 20",
+    "postalCode": "87021",
+    "addressLocality": "Belvedere Marittimo",
+    "addressRegion": "CS",
+    "addressCountry": "IT"
+  },
+  "areaServed": ["Belvedere Marittimo", "Saracena"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"], "opens": "15:30", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Saturday"], "opens": "09:00", "closes": "13:00" }
+  ],
+  "availableService": [
+    { "@type": "MedicalTest", "name": "Visita cardiologica con elettrocardiogramma" },
+    { "@type": "MedicalTest", "name": "Ecocardiogramma color-Doppler" },
+    { "@type": "MedicalTest", "name": "Ecocolordoppler dei tronchi sopraortici" },
+    { "@type": "MedicalTest", "name": "Monitoraggio Holter elettrocardiografico e pressorio" },
+    { "@type": "MedicalTest", "name": "Certificazione per attività sportiva non agonistica" }
+  ]
+}
+</script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Menu mobile
+  const header = document.querySelector('header');
+  const toggle = document.querySelector('.nav-toggle');
+  const setMenu = (open) => {
+    header.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+  };
+  toggle.addEventListener('click', (e) => { e.stopPropagation(); setMenu(!header.classList.contains('nav-open')); });
+  document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', (e) => { if (header.classList.contains('nav-open') && !header.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+  // Voce di nav della sezione in lettura: filetto accento sotto la voce corrente
+  const links = new Map();
+  document.querySelectorAll('#nav a[href^="#"]').forEach(a => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el && !a.classList.contains('btn')) links.set(el, a);
+  });
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const a = links.get(entry.target);
+      if (!a) return;
+      if (entry.isIntersecting) {
+        links.forEach(l => l.removeAttribute('aria-current'));
+        a.setAttribute('aria-current', 'true');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  links.forEach((_a, el) => spy.observe(el));
+</script>
+</body>
+</html>
