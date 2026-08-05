@@ -92,8 +92,7 @@ Il sito è online come **anteprima su GitHub Pages**, servita dalla radice del r
 ## Da completare
 
 - **Le due fotografie**: ritratto in studio (apertura) e ritratto del medico (sezione *Lo studio*). Al loro posto ci sono due campiture con didascalia; cercare `Sostituire con` in `index.html`. Esportare in WebP con `width`/`height` espliciti e `loading="lazy"` per quella sotto la piega.
-- **Informativa privacy**: è compilata con i dati reali, ma tratta dati sanitari (art. 9 GDPR) e **va fatta validare da un consulente**. Da confermare in particolare i tempi di conservazione, oggi espressi in forma generica.
-- **Testo della comunicazione sanitaria** nel footer: la formula attuale è generica, va confermata con l'Ordine dei Medici di Cosenza.
+- Una telefonata all'**Ordine dei Medici di Cosenza**: alcuni Ordini provinciali chiedono di essere informati dell'apertura di un sito professionale, o hanno linee guida proprie.
 - Eventuale **mappa statica** nelle due sedi: oggi c'è il collegamento alle indicazioni stradali di Google Maps, che non carica nulla da terze parti finché non lo si clicca. Una mappa incorporata comporterebbe cookie di terzi e un banner di consenso.
 
 ## Correzione al marchio (difetto nei file consegnati)
@@ -105,6 +104,14 @@ Nelle copie in `assets/logo/` e nei marchi ricomposti dentro le pagine la viewBo
 In `favicon.svg` il marchio non era tagliato ma stava alto nel quadrato (centro a 27.3 invece di 32): corretto il `transform`, e i PNG `favicon-{32,180,512}.png` sono stati rigenerati dal file corretto (i riferimenti nelle pagine sono passati a `?v=2`).
 
 I file originali restano intatti in `_sources/`. **La correzione va riportata anche lì dal grafico**, insieme al passaggio in editor vettoriale già segnalato nel README dell'handoff: il `lockup-orizzontale.png` invece è a posto, il marchio non è tagliato.
+
+## Privacy e comunicazione sanitaria
+
+Due scelte deliberate, per non far dire al sito cose che spettano allo studio.
+
+**L'informativa privacy copre solo il sito.** Il sito non ha moduli, non usa cookie, non ha analytics e i font sono in locale: non raccoglie nulla, quindi non c'è un banner di consenso perché non c'è nulla da consentire. La pagina dichiara il titolare, i due fornitori (hosting e posta), i dati tecnici registrati nei log del server e i diritti dell'interessato. Il trattamento dei **dati sanitari** (art. 9 GDPR) non è descritto qui: avviene nell'ambito della prestazione medica e la relativa informativa lo studio la consegna già al paziente in sede di visita. Duplicarla sul sito avrebbe significato scrivere al posto del cliente affermazioni su conservazione e basi giuridiche che non ci competono.
+
+**Nessuna dicitura di pubblicità sanitaria nel footer.** La legge 145/2018 (art. 1, commi 525 e seguenti) impone che le comunicazioni sanitarie contengano solo informazioni funzionali alla sicurezza dei trattamenti, senza elementi promozionali o suggestivi: regola il *contenuto*, non impone una frase di disclaimer. Il sito è conforme per costruzione — nessun superlativo, nessuna promessa di risultato, nessun prezzo come offerta — e riporta i dati identificativi che la deontologia richiede: qualifica, specializzazioni, iscrizione all'Ordine, P. IVA. Direttore sanitario e autorizzazione sanitaria non si applicano: riguardano le strutture, non lo studio individuale.
 
 ## Note
 
