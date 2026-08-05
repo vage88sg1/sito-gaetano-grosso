@@ -92,7 +92,6 @@ Il sito è online come **anteprima su GitHub Pages**, servita dalla radice del r
 ## Da completare
 
 - **Le due fotografie**: ritratto in studio (apertura) e ritratto del medico (sezione *Lo studio*). Al loro posto ci sono due campiture con didascalia; cercare `Sostituire con` in `index.html`. Esportare in WebP con `width`/`height` espliciti e `loading="lazy"` per quella sotto la piega.
-- **Numero civico della sede di Saracena**, oggi indicata come «Via Santa Maria Maddalena» senza civico.
 - **Informativa privacy**: è compilata con i dati reali, ma tratta dati sanitari (art. 9 GDPR) e **va fatta validare da un consulente**. Da confermare in particolare i tempi di conservazione, oggi espressi in forma generica.
 - **Testo della comunicazione sanitaria** nel footer: la formula attuale è generica, va confermata con l'Ordine dei Medici di Cosenza.
 - Eventuale **mappa statica** nelle due sedi: oggi c'è il collegamento alle indicazioni stradali di Google Maps, che non carica nulla da terze parti finché non lo si clicca. Una mappa incorporata comporterebbe cookie di terzi e un banner di consenso.
