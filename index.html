@@ -287,6 +287,8 @@
   }
   @media (max-width:899px){
     :root{--pad-x:32px;--fs-hero:36px;--fs-h2:30px;--space-8:72px}
+    /* stesso passo dei pulsanti in fila nella hero: --space-3 */
+    .nav-bar{gap:var(--space-3)}
     .nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px}
     /* margin-left:auto — telefono e menu restano appaiati a destra, non sparpagliati */
     .nav-phone{display:inline-flex;gap:8px;margin-left:auto}
@@ -317,7 +319,7 @@
   @media (max-width:599px){
     :root{--pad-x:24px;--fs-hero:30px;--fs-h2:26px;--fs-h3:22px;--fs-lead:17px}
     /* La testata deve stare in una riga sola: lockup ridotto + due comandi quadrati da 44px */
-    .nav-bar{gap:10px;padding:16px 0}
+    .nav-bar{padding:16px 0}
     .lockup{min-width:0;gap:10px}
     .lockup .mono-mark{width:40px}
     .lockup-eyebrow{display:none}
@@ -329,7 +331,6 @@
   }
   /* Schermi molto stretti: il nome in testata resta intero, senza troncature */
   @media (max-width:399px){
-    .nav-bar{gap:8px}
     .lockup-name{font-size:15px}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
