@@ -92,7 +92,7 @@ Il sito è online come **anteprima su GitHub Pages**, servita dalla radice del r
 ## Da completare
 
 - **Le due fotografie**: ritratto in studio (apertura) e ritratto del medico (sezione *Lo studio*). Al loro posto ci sono due campiture con didascalia; cercare `Sostituire con` in `index.html`. Esportare in WebP con `width`/`height` espliciti e `loading="lazy"` per quella sotto la piega.
-- Una telefonata all'**Ordine dei Medici di Cosenza**: alcuni Ordini provinciali chiedono di essere informati dell'apertura di un sito professionale, o hanno linee guida proprie.
+- **Comunicare la messa online all'Ordine dei Medici di Cosenza**, contestualmente al passaggio sul dominio definitivo: è un adempimento previsto dalla linea-guida FNOMCeO, non una cortesia. Recapiti e dettagli nella sezione *Privacy e comunicazione sanitaria*.
 - Eventuale **mappa statica** nelle due sedi: oggi c'è il collegamento alle indicazioni stradali di Google Maps, che non carica nulla da terze parti finché non lo si clicca. Una mappa incorporata comporterebbe cookie di terzi e un banner di consenso.
 
 ## Correzione al marchio (difetto nei file consegnati)
@@ -111,7 +111,19 @@ Due scelte deliberate, per non far dire al sito cose che spettano allo studio.
 
 **L'informativa privacy copre solo il sito.** Il sito non ha moduli, non usa cookie, non ha analytics e i font sono in locale: non raccoglie nulla, quindi non c'è un banner di consenso perché non c'è nulla da consentire. La pagina dichiara il titolare, i due fornitori (hosting e posta), i dati tecnici registrati nei log del server e i diritti dell'interessato. Il trattamento dei **dati sanitari** (art. 9 GDPR) non è descritto qui: avviene nell'ambito della prestazione medica e la relativa informativa lo studio la consegna già al paziente in sede di visita. Duplicarla sul sito avrebbe significato scrivere al posto del cliente affermazioni su conservazione e basi giuridiche che non ci competono.
 
-**Nessuna dicitura di pubblicità sanitaria nel footer.** La legge 145/2018 (art. 1, commi 525 e seguenti) impone che le comunicazioni sanitarie contengano solo informazioni funzionali alla sicurezza dei trattamenti, senza elementi promozionali o suggestivi: regola il *contenuto*, non impone una frase di disclaimer. Il sito è conforme per costruzione — nessun superlativo, nessuna promessa di risultato, nessun prezzo come offerta — e riporta i dati identificativi che la deontologia richiede: qualifica, specializzazioni, iscrizione all'Ordine, P. IVA. Direttore sanitario e autorizzazione sanitaria non si applicano: riguardano le strutture, non lo studio individuale.
+**Comunicazione sanitaria: tre adempimenti, non uno.** Le fonti sono due e si sommano.
+
+La **legge 145/2018** (art. 1, commi 525 e seguenti) regola il *contenuto*: solo informazioni funzionali alla sicurezza dei trattamenti, senza elementi promozionali o suggestivi. Il sito è conforme per costruzione — nessun superlativo, nessuna promessa di risultato, nessun prezzo presentato come offerta — e riporta i dati identificativi richiesti dalla deontologia: qualifica, specializzazioni, iscrizione all'Ordine, P. IVA.
+
+La **linea-guida FNOMCeO sulla pubblicità dell'informazione sanitaria**, attuativa degli artt. 55–57 del Codice di deontologia medica, aggiunge tre requisiti specifici per i siti internet:
+
+1. **Dichiarazione nel sito**: il professionista dichiara «sotto la propria responsabilità, che il messaggio informativo è diramato nel rispetto della presente linea guida». È la nota in fondo alla pagina — non è decorativa, è l'adempimento.
+2. **Comunicazione all'Ordine provinciale** della messa online del sito, dichiarandone la conformità deontologica. **Va fatta al momento del passaggio sul dominio definitivo**, non per l'anteprima su GitHub Pages.
+3. **Dominio nazionale o UE**: i siti «devono essere registrati su domini nazionali italiani e/o dell'Unione Europea». `dottorgaetanogrosso.it` soddisfa il requisito; un `.com` no.
+
+Direttore sanitario e autorizzazione sanitaria non si applicano: riguardano le strutture, non lo studio individuale.
+
+**Ordine dei Medici Chirurghi e degli Odontoiatri di Cosenza** — Via Suor Elena Aiello (Palazzo Lucchetta), 87100 Cosenza · tel. 0984 412841 · segreteria@ordinemedici.cosenza.it · PEC segreteria@pec.ordinemedici.cosenza.it. Chiedere alla segreteria il modulo di comunicazione, se ne usano uno proprio.
 
 ## Note
 
