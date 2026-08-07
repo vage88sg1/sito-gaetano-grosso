@@ -6,15 +6,15 @@
   nessuna animazione (solo transizioni di colore 120ms).
   Impiego del colore: accento = interazione, inchiostro = struttura, tinta una volta sola.
   Nessuna prenotazione online, nessun modulo, nessun cookie: i contatti sono telefono ed email.
-  Contenuti compilati con i dati forniti dallo studio. Restano da inserire le due fotografie
-  (ritratto in studio e ritratto del medico): cercare "Sostituire con" nel file.
+  Contenuti compilati con i dati forniti dallo studio. Nessuna fotografia, per scelta
+  del cliente: la pagina è composta di solo testo, filetti e marchio.
 -->
 <html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)</title>
-<meta name="description" content="Studio privato del Dott. Gaetano Grosso, medico chirurgo specialista in Cardiologia e Nefrologia. Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sopraortici nello stesso appuntamento. Belvedere Marittimo (CS) e Saracena (CS). Appuntamenti per telefono.">
+<meta name="description" content="Studio privato del Dott. Gaetano Grosso, medico chirurgo specialista in Cardiologia e Nefrologia. Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sovraortici nello stesso appuntamento. Belvedere Marittimo (CS) e Saracena (CS). Appuntamenti per telefono.">
 <!-- Anteprima su GitHub Pages: esclusa dai motori di ricerca.
      Rimuovere questo meta e il Disallow in robots.txt alla pubblicazione sul dominio definitivo. -->
 <meta name="robots" content="noindex, nofollow">
@@ -22,7 +22,7 @@
 
 <!-- Open Graph -->
 <meta property="og:title" content="Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)">
-<meta property="og:description" content="Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sopraortici nello stesso appuntamento. Referto cartaceo consegnato al termine della visita.">
+<meta property="og:description" content="Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sovraortici nello stesso appuntamento. Referto cartaceo consegnato al termine della visita.">
 <meta property="og:url" content="https://www.dottorgaetanogrosso.it/">
 <link rel="canonical" href="https://www.dottorgaetanogrosso.it/">
 <meta property="og:type" content="website">
@@ -178,16 +178,13 @@
   .section-head h2{font-size:var(--fs-h2)}
 
   /* ——— HERO ——— */
-  .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:var(--space-6);
-    padding:64px 0 var(--space-7);align-items:center}
-  .hero-col{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
-  .hero h1{font-weight:400;font-size:var(--fs-hero);line-height:1.12;letter-spacing:-.005em;color:var(--text)}
+  /* Colonna unica: lo studio non usa fotografie, la pagina è tutta testo e filetti */
+  .hero{display:flex;flex-direction:column;align-items:flex-start;gap:24px;
+    padding:80px 0 var(--space-7)}
+  .hero h1{font-weight:400;font-size:var(--fs-hero);line-height:1.12;letter-spacing:-.005em;
+    color:var(--text);max-width:22ch}
+  .hero .lead{max-width:58ch}
   .hero-actions{display:flex;gap:var(--space-3);flex-wrap:wrap}
-  /* Segnaposto del ritratto: campitura piena, sostituire con <img> della foto reale (vedi README) */
-  .portrait{height:340px;border:1px solid var(--line-strong);background:var(--bg-surface);
-    display:flex;align-items:center;justify-content:center}
-  .portrait span{font-size:15px;color:var(--text-muted)}
-  .portrait img{width:100%;height:100%;object-fit:cover}
 
   /* ——— FASCIA RECAPITI (subito sotto la hero: ciò che serve davvero al paziente) ——— */
   .quickbar{background:var(--bg-surface);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
@@ -226,12 +223,11 @@
 
   /* ——— IL MEDICO: testo a sinistra, ritratto e dati a destra ——— */
   .medico{display:grid;grid-template-columns:1fr 340px;gap:var(--space-6);align-items:start}
-  .medico .portrait{height:340px}
   .cv{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-4)}
   .cv li{position:relative;padding-left:var(--space-4);color:var(--text-secondary)}
   .cv li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:1px;background:var(--ink)}
   .facts{border:1px solid var(--line-strong);background:var(--bg-band);padding:var(--space-4) var(--space-5);
-    margin-top:var(--space-4);display:grid;gap:var(--space-3)}
+    display:grid;gap:var(--space-3)}
   .facts div{display:flex;flex-direction:column;gap:2px}
   .facts dt{font-size:var(--fs-meta);font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
   .facts dd{font-size:17px;color:var(--text)}
@@ -269,6 +265,23 @@
   .sede h3{font-size:21px;margin-bottom:8px}
   .sede p{color:var(--text-secondary);font-size:17px}
   .sede .v{font-family:var(--font-mono);font-size:17px;color:var(--text);margin-bottom:6px}
+  /* Mappa a caricamento su richiesta: prima del clic nessun contatto con Google */
+  .mappa{margin:var(--space-3) 0;border:1px solid var(--line-strong);background:var(--bg-card)}
+  .mappa-load{display:flex;flex-direction:column;gap:8px;width:100%;min-height:180px;
+    padding:var(--space-4) var(--space-5);background:transparent;border:0;cursor:pointer;
+    font-family:inherit;text-align:left;align-items:flex-start;justify-content:center;
+    transition:background-color .12s ease-out}
+  .mappa-load:hover{background:var(--bg-band)}
+  .mappa-load .titolo{font-size:17px;font-weight:500;color:var(--accent-dark)}
+  .mappa-load .nota{font-size:15px;color:var(--text-muted);max-width:52ch}
+  .mappa iframe{display:block;width:100%;height:300px;border:0}
+  /* Mappa a caricamento su richiesta: nessuna chiamata a Google prima del clic */
+  .mappa{border:1px solid var(--line-strong);background:var(--bg-band);margin:var(--space-3) 0;
+    min-height:240px;padding:var(--space-4);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:var(--space-3);text-align:center}
+  .mappa-nota{font-size:15px;color:var(--text-muted);max-width:44ch}
+  .mappa--attiva{display:block;padding:0;min-height:0;border-color:var(--line-strong)}
+  .mappa iframe{display:block;width:100%;height:280px;border:0}
   .hours{width:100%;border-collapse:collapse;margin-top:var(--space-3)}
   .hours th{text-align:left;font-size:var(--fs-meta);font-weight:500;letter-spacing:.1em;
     text-transform:uppercase;color:var(--text-muted);padding:0 0 10px}
@@ -295,7 +308,6 @@
   /* ——— RESPONSIVE — breakpoint 1200 / 900 / 600 ——— */
   @media (max-width:1199px){
     :root{--fs-hero:42px}
-    .hero{gap:40px}
   }
   @media (max-width:899px){
     :root{--pad-x:32px;--fs-hero:36px;--fs-h2:30px;--space-8:72px}
@@ -312,8 +324,7 @@
       border-bottom:1px solid var(--line-strong)}
     .nav a:not(.btn)[aria-current="true"]{border-bottom-color:var(--line);color:var(--accent-dark)}
     .nav .btn{margin-top:var(--space-4);padding:16px 26px;font-size:17px}
-    .hero{grid-template-columns:1fr;gap:var(--space-5);padding:var(--space-6) 0}
-    .hero-portrait{order:-1}
+    .hero{padding:var(--space-6) 0}
     .quickbar-grid{grid-template-columns:1fr}
     .quick{border-left:0;border-top:1px solid var(--line-strong);padding:var(--space-4) 0}
     .quick:first-child{border-top:0}
@@ -321,7 +332,6 @@
     .svc-dur{text-align:left}
     .protocol li{grid-template-columns:48px 1fr;gap:var(--space-3)}
     .medico{grid-template-columns:1fr;gap:var(--space-5)}
-    .medico .portrait{height:320px;max-width:420px}
     .strumenti{grid-template-columns:1fr;gap:10px}
     .faq-item{grid-template-columns:1fr;gap:8px}
     .contact-panels{grid-template-columns:1fr}
@@ -412,7 +422,6 @@
   <!-- ——— HERO ——— -->
   <div class="wrap">
     <div class="hero">
-      <div class="hero-col">
         <p class="meta">Studio cardiologico</p>
         <h1>Una visita completa, in un solo appuntamento</h1>
         <p class="lead">Il cuore va controllato per tempo. Visita, esami strumentali e referto in un&rsquo;unica seduta, con l&rsquo;esperienza di oltre trent&rsquo;anni di specializzazione in cardiologia.</p>
@@ -420,11 +429,6 @@
           <a class="btn btn-primary" href="#contatti">Prenota una visita</a>
           <a class="btn btn-secondary" href="#percorso">Svolgimento della visita</a>
         </div>
-      </div>
-      <div class="hero-portrait">
-        <!-- Sostituire con: <img src="assets/img/ritratto-studio.webp" width="..." height="..." alt="Il Dott. Gaetano Grosso nel suo studio"> -->
-        <div class="portrait"><span>Ritratto in studio</span></div>
-      </div>
     </div>
   </div>
 
@@ -468,7 +472,7 @@
             <ul class="svc-list">
               <li>elettrocardiogramma</li>
               <li>ecocardiogramma color-Doppler</li>
-              <li>ecocolordoppler dei tronchi sopraortici</li>
+              <li>ecocolordoppler dei tronchi sovraortici</li>
             </ul>
           </div>
           <span class="svc-dur">40 min</span>
@@ -476,7 +480,7 @@
         <article class="svc-row">
           <h3>Monitoraggio Holter</h3>
           <div>
-            <p>Registrazione dell’elettrocardiogramma o della pressione arteriosa nelle ventiquattro ore. Il tempo indicato è quello dell’applicazione dell’apparecchio; la lettura e il referto avvengono al momento del ritiro.</p>
+            <p>Registrazione dell’elettrocardiogramma o della pressione arteriosa nelle ventiquattro ore. Il tempo indicato è quello dell’applicazione dell’apparecchio: conclusa la registrazione, il tracciato viene refertato nei giorni successivi e il referto consegnato al paziente in copia cartacea.</p>
           </div>
           <span class="svc-dur">15 min</span>
         </article>
@@ -504,7 +508,7 @@
       <div class="section-head">
         <p class="meta">Percorso</p>
         <h2>Svolgimento della visita</h2>
-        <p class="lead">Un unico appuntamento, senza passaggi intermedi: al termine il paziente riceve il referto in copia cartacea e le indicazioni scritte.</p>
+        <p class="lead">Un unico appuntamento, senza passaggi intermedi: al termine il paziente riceve il referto in copia cartacea e le indicazioni da seguire.</p>
       </div>
 
       <ol class="protocol">
@@ -533,14 +537,14 @@
           <span class="num">4</span>
           <div>
             <h3>Esami strumentali</h3>
-            <p>Elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sopraortici, quando indicati, vengono eseguiti nel corso della stessa seduta.</p>
+            <p>Elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sovraortici, quando indicati, vengono eseguiti nel corso della stessa seduta.</p>
           </div>
         </li>
         <li>
           <span class="num">5</span>
           <div>
             <h3>Referto e indicazioni</h3>
-            <p>Il referto viene consegnato in copia cartacea al termine della visita e illustrato al paziente, con indicazioni scritte su terapia, esami ed eventuali controlli successivi. Su richiesta può essere trasmesso anche al medico curante.</p>
+            <p>Il referto viene consegnato in copia cartacea al termine della visita e illustrato al paziente, con le indicazioni da seguire su terapia, esami ed eventuali controlli successivi. Su richiesta può essere trasmesso anche al medico curante.</p>
           </div>
         </li>
       </ol>
@@ -569,8 +573,6 @@
           </ul>
         </div>
         <div>
-          <!-- Sostituire con la fotografia del medico -->
-          <div class="portrait"><span>Ritratto del medico</span></div>
           <dl class="facts">
             <div><dt>Qualifica</dt><dd>Medico chirurgo</dd></div>
             <div><dt>Specializzazioni</dt><dd>Cardiologia · Nefrologia</dd></div>
@@ -581,7 +583,7 @@
 
       <div class="strumenti">
         <h3>Dotazione strumentale</h3>
-        <p>Elettrocardiografo, ecocardiografo con sonda cardiologica e color-Doppler, apparecchio per l’ecocolordoppler dei tronchi sopraortici, registratori Holter elettrocardiografico e pressorio. Tutti gli esami sono eseguiti e refertati direttamente in studio, senza rinvii ad altre strutture.</p>
+        <p>Elettrocardiografo, ecocardiografo con sonda cardiologica e color-Doppler, apparecchio per l’ecocolordoppler dei tronchi sovraortici, registratori Holter elettrocardiografico e pressorio. Tutti gli esami sono eseguiti e refertati direttamente in studio, senza rinvii ad altre strutture.</p>
       </div>
     </div>
   </section>
@@ -601,7 +603,7 @@
         </div>
         <div class="faq-item">
           <h3>Quando viene consegnato il referto?</h3>
-          <p>Al termine della visita, in copia cartacea, e illustrato al paziente. Su richiesta può essere trasmesso anche al medico curante.</p>
+          <p>Al termine della visita, in copia cartacea, e illustrato al paziente. Fa eccezione il monitoraggio Holter, refertato nei giorni successivi alla registrazione. Su richiesta il referto può essere trasmesso anche al medico curante.</p>
         </div>
         <div class="faq-item">
           <h3>Che cosa occorre portare?</h3>
@@ -666,7 +668,7 @@
               <tr><td>Domenica e festivi</td><td>chiuso</td></tr>
             </tbody>
           </table>
-          <p class="hint" style="margin-top:14px">Si riceve esclusivamente su appuntamento.<br>
+          <p class="hint" style="margin-top:14px">Si riceve solo su appuntamento.<br>
           Risposta telefonica: Lunedì–Venerdì 15:30–19:30.</p>
         </div>
 
@@ -675,12 +677,24 @@
             <h3>Belvedere Marittimo</h3>
             <p class="v">Via Sant’Antonio 20 — 87021 Belvedere Marittimo (CS)</p>
             <p>Studi Medici, piano terra: nessuna barriera architettonica. Parcheggio gratuito.</p>
-            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Sant%27Antonio%2020%2C%2087021%20Belvedere%20Marittimo%20CS">Apri le indicazioni stradali</a></p>
+            <div class="mappa">
+              <button type="button" class="mappa-load" data-src="https://www.google.com/maps?q=39.617406,15.858948&amp;z=16&amp;hl=it&amp;output=embed" data-titolo="Mappa dello studio di Belvedere Marittimo">
+                <span class="titolo">Mostra la mappa</span>
+                <span class="nota">La mappa &egrave; fornita da Google: si carica solo se la richiedi.</span>
+              </button>
+            </div>
+            <p><a href="https://maps.app.goo.gl/zpoicRVSYz9gCvdL6">Apri le indicazioni stradali</a></p>
           </div>
           <div class="sede">
             <h3>Saracena</h3>
             <p class="v">Via Santa Maria Maddalena 36 — 87010 Saracena (CS)</p>
             <p>Il Dott. Grosso riceve anche presso lo Studio Laurito. I giorni di visita sono fissati direttamente dallo studio: per prenotare telefonare allo <a href="tel:+390981349369">0981 349369</a>, martedì 9:00–12:00 e mercoledì 15:30–18:00.</p>
+            <div class="mappa">
+              <button type="button" class="mappa-load" data-src="https://www.google.com/maps?q=Via+Santa+Maria+Maddalena+36,+87010+Saracena+CS&amp;z=16&amp;hl=it&amp;output=embed" data-titolo="Mappa dello studio di Saracena">
+                <span class="titolo">Mostra la mappa</span>
+                <span class="nota">La mappa &egrave; fornita da Google: si carica solo se la richiedi.</span>
+              </button>
+            </div>
             <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Santa%20Maria%20Maddalena%2036%2C%2087010%20Saracena%20CS">Apri le indicazioni stradali</a></p>
           </div>
         </div>
@@ -726,7 +740,7 @@
           <li>Mer e Sab 9:00–13:00</li>
           <li>Domenica e festivi chiuso</li>
         </ul>
-        <p style="font-size:15px;color:var(--line-strong)">Si riceve su appuntamento.</p>
+        <p style="font-size:15px;color:var(--line-strong)">Si riceve solo su appuntamento.</p>
       </div>
     </div>
 
@@ -771,7 +785,7 @@
   "availableService": [
     { "@type": "MedicalTest", "name": "Visita cardiologica con elettrocardiogramma" },
     { "@type": "MedicalTest", "name": "Ecocardiogramma color-Doppler" },
-    { "@type": "MedicalTest", "name": "Ecocolordoppler dei tronchi sopraortici" },
+    { "@type": "MedicalTest", "name": "Ecocolordoppler dei tronchi sovraortici" },
     { "@type": "MedicalTest", "name": "Monitoraggio Holter elettrocardiografico e pressorio" },
     { "@type": "MedicalTest", "name": "Certificazione per attività sportiva non agonistica" }
   ]
@@ -814,6 +828,19 @@
     if (header.classList.contains('phone-open')) setPhone(false);
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setMenu(false); setPhone(false); } });
+
+  // Mappe: si caricano solo su richiesta, così all'apertura nessun contatto con Google
+  document.querySelectorAll('.mappa-load').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const frame = document.createElement('iframe');
+      frame.src = btn.dataset.src;
+      frame.title = btn.dataset.titolo;
+      frame.loading = 'lazy';
+      frame.setAttribute('allowfullscreen', '');
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      btn.replaceWith(frame);
+    });
+  });
 
   // Voce di nav della sezione in lettura: filetto accento sotto la voce corrente
   const links = new Map();
