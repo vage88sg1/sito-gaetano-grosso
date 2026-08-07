@@ -149,6 +149,18 @@
   .nav-toggle:hover{border-color:var(--accent);color:var(--accent-dark)}
   .nav-toggle .ico{display:none;width:18px;height:18px}
   .nav-phone .ico{display:none;width:18px;height:18px}
+  /* Scelta del recapito: si apre sotto la testata come la tendina del menu */
+  .phone-menu{display:none;position:absolute;top:100%;left:0;right:0;z-index:49;
+    background:var(--bg-card);border-bottom:1px solid var(--line-strong);
+    padding:0 var(--pad-x) var(--space-4)}
+  header.phone-open .phone-menu{display:block}
+  .phone-item{display:flex;flex-direction:column;gap:2px;padding:16px 0;min-height:44px;
+    text-decoration:none;border-bottom:1px solid var(--line-strong)}
+  .phone-item:last-child{border-bottom:0}
+  .phone-item .v{font-family:var(--font-mono);font-size:22px;font-variant-numeric:tabular-nums;
+    color:var(--accent-dark)}
+  .phone-item .hint{font-size:16px;color:var(--text-secondary)}
+  .phone-item:hover .v{color:var(--ink)}
 
   /* ——— MARCHIO (monogramma GG, ricomposto in HTML) ——— */
   .mono-mark .mm-ring,.mono-mark .mm-beat{stroke:var(--ink)}
@@ -367,7 +379,7 @@
       </nav>
 
       <!-- Su mobile: telefono sempre a portata di pollice + menu. Sotto i 600px restano due comandi da 44px. -->
-      <a class="btn btn-primary btn-sm nav-phone" href="tel:+39098582500" aria-label="Chiama lo studio">
+      <a class="btn btn-primary btn-sm nav-phone" href="#contatti" aria-expanded="false" aria-controls="phone-menu" aria-label="Chiama lo studio">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6 3z"/></svg>
         <span class="lbl">Chiama</span>
       </a>
@@ -375,6 +387,22 @@
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <span class="lbl">Menu</span>
       </button>
+    </div>
+  </div>
+
+  <!-- Scelta del recapito su mobile. Senza JavaScript il pulsante porta ai contatti. -->
+  <div class="phone-menu" id="phone-menu">
+    <div class="wrap" style="padding:0">
+      <a class="phone-item" href="tel:+39098582500">
+        <span class="meta meta-muted">Telefono dello studio</span>
+        <span class="v">0985 82500</span>
+        <span class="hint">Lun&ndash;Ven 15:30&ndash;19:30</span>
+      </a>
+      <a class="phone-item" href="tel:+393358435336">
+        <span class="meta meta-muted">Cellulare</span>
+        <span class="v">335 8435336</span>
+        <span class="hint">Lun&ndash;Ven 15:30&ndash;19:30 &middot; risponde il dottore</span>
+      </a>
     </div>
   </div>
 </header>
@@ -615,7 +643,7 @@
           <span class="meta meta-muted">Cellulare</span>
           <span class="v">335 8435336</span>
           <p class="hint">Lunedì–Venerdì 15:30–19:30. Risponde direttamente il dottore.</p>
-          <a class="btn btn-secondary" href="tel:+393358435336">Chiama il cellulare</a>
+          <a class="btn btn-primary" href="tel:+393358435336">Chiama il cellulare</a>
         </div>
       </div>
 
@@ -757,14 +785,35 @@
   const header = document.querySelector('header');
   const toggle = document.querySelector('.nav-toggle');
   const setMenu = (open) => {
+    if (open) header.classList.remove('phone-open');
     header.classList.toggle('nav-open', open);
     toggle.setAttribute('aria-expanded', open);
     toggle.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
   };
   toggle.addEventListener('click', (e) => { e.stopPropagation(); setMenu(!header.classList.contains('nav-open')); });
   document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('click', (e) => { if (header.classList.contains('nav-open') && !header.contains(e.target)) setMenu(false); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+  // Cornetta: scelta fra fisso e cellulare. Senza JavaScript il link porta ai contatti.
+  const phoneBtn = document.querySelector('.nav-phone');
+  const setPhone = (open) => {
+    header.classList.toggle('phone-open', open);
+    phoneBtn.setAttribute('aria-expanded', open);
+    phoneBtn.setAttribute('aria-label', open ? 'Chiudi la scelta del recapito' : 'Chiama lo studio');
+  };
+  phoneBtn.addEventListener('click', (e) => {
+    e.preventDefault(); e.stopPropagation();
+    const open = !header.classList.contains('phone-open');
+    if (open) setMenu(false);
+    setPhone(open);
+  });
+  document.querySelectorAll('#phone-menu a').forEach(a => a.addEventListener('click', () => setPhone(false)));
+
+  document.addEventListener('click', (e) => {
+    if (header.contains(e.target)) return;
+    if (header.classList.contains('nav-open')) setMenu(false);
+    if (header.classList.contains('phone-open')) setPhone(false);
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setMenu(false); setPhone(false); } });
 
   // Voce di nav della sezione in lettura: filetto accento sotto la voce corrente
   const links = new Map();
