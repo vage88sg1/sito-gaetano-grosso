@@ -16,15 +16,32 @@
 <title>Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)</title>
 <meta name="description" content="Studio privato del Dott. Gaetano Grosso, medico chirurgo specialista in Cardiologia e Nefrologia. Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sovraortici nello stesso appuntamento. Belvedere Marittimo (CS) e Saracena (CS). Appuntamenti per telefono.">
 <meta name="theme-color" content="#37545C">
+<meta name="author" content="Dott. Gaetano Grosso">
+<!-- max-image-preview:large abilita l'anteprima grande nei risultati di ricerca -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://www.dottorgaetanogrosso.it/">
 
-<!-- Open Graph -->
+<!-- Riferimenti geografici della sede principale -->
+<meta name="geo.region" content="IT-CS">
+<meta name="geo.placename" content="Belvedere Marittimo">
+<meta name="geo.position" content="39.617406;15.858948">
+<meta name="ICBM" content="39.617406, 15.858948">
+
+<!-- Open Graph: anteprima quando il collegamento viene condiviso -->
+<meta property="og:site_name" content="Dott. Gaetano Grosso — Studio cardiologico">
 <meta property="og:title" content="Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)">
 <meta property="og:description" content="Visita cardiologica con elettrocardiogramma, ecocardiogramma color-Doppler ed ecocolordoppler dei tronchi sovraortici nello stesso appuntamento. Referto cartaceo consegnato al termine della visita.">
 <meta property="og:url" content="https://www.dottorgaetanogrosso.it/">
-<link rel="canonical" href="https://www.dottorgaetanogrosso.it/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
-<meta property="og:image" content="assets/logo/lockup-orizzontale.png?v=1">
+<meta property="og:image" content="https://www.dottorgaetanogrosso.it/assets/logo/lockup-orizzontale.png">
+<meta property="og:image:width" content="2404">
+<meta property="og:image:height" content="780">
+<meta property="og:image:alt" content="Dott. Gaetano Grosso — Studio cardiologico">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dott. Gaetano Grosso — Cardiologo a Belvedere Marittimo (CS)">
+<meta name="twitter:description" content="Visita cardiologica ed esami strumentali nello stesso appuntamento, a Belvedere Marittimo e Saracena (CS).">
+<meta name="twitter:image" content="https://www.dottorgaetanogrosso.it/assets/logo/lockup-orizzontale.png">
 
 <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg?v=2">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png?v=2">
@@ -758,37 +775,183 @@
   </div>
 </footer>
 
-<!-- Dati strutturati della sede principale. La seconda sede (Studio Laurito, Saracena) resta
-     solo nel testo: non è una filiale né una sotto-organizzazione dello studio, e modellarla
-     come tale in schema.org sarebbe una dichiarazione falsa. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Dott. Gaetano Grosso — Studio cardiologico",
-  "medicalSpecialty": "Cardiovascular",
-  "url": "https://www.dottorgaetanogrosso.it/",
-  "telephone": "+39 0985 82500",
-  "email": "gaetanogrosso@yahoo.it",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Via Sant'Antonio 20",
-    "postalCode": "87021",
-    "addressLocality": "Belvedere Marittimo",
-    "addressRegion": "CS",
-    "addressCountry": "IT"
-  },
-  "areaServed": ["Belvedere Marittimo", "Saracena"],
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"], "opens": "15:30", "closes": "20:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Saturday"], "opens": "09:00", "closes": "13:00" }
-  ],
-  "availableService": [
-    { "@type": "MedicalTest", "name": "Visita cardiologica con elettrocardiogramma" },
-    { "@type": "MedicalTest", "name": "Ecocardiogramma color-Doppler" },
-    { "@type": "MedicalTest", "name": "Ecocolordoppler dei tronchi sovraortici" },
-    { "@type": "MedicalTest", "name": "Monitoraggio Holter elettrocardiografico e pressorio" },
-    { "@type": "MedicalTest", "name": "Certificazione per attività sportiva non agonistica" }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.dottorgaetanogrosso.it/#sito",
+      "url": "https://www.dottorgaetanogrosso.it/",
+      "name": "Dott. Gaetano Grosso — Studio cardiologico",
+      "inLanguage": "it-IT",
+      "publisher": {
+        "@id": "https://www.dottorgaetanogrosso.it/#studio"
+      }
+    },
+    {
+      "@type": [
+        "Physician",
+        "MedicalBusiness"
+      ],
+      "@id": "https://www.dottorgaetanogrosso.it/#studio",
+      "name": "Dott. Gaetano Grosso — Studio cardiologico",
+      "url": "https://www.dottorgaetanogrosso.it/",
+      "logo": "https://www.dottorgaetanogrosso.it/assets/logo/lockup-orizzontale.png",
+      "image": "https://www.dottorgaetanogrosso.it/assets/logo/lockup-orizzontale.png",
+      "description": "Studio privato di cardiologia del Dott. Gaetano Grosso, medico chirurgo specialista in Cardiologia e Nefrologia. Visita ed esami strumentali nello stesso appuntamento.",
+      "medicalSpecialty": "Cardiovascular",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "telephone": "+39 0985 82500",
+      "email": "gaetanogrosso@yahoo.it",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Sant'Antonio 20",
+        "postalCode": "87021",
+        "addressLocality": "Belvedere Marittimo",
+        "addressRegion": "CS",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.617406,
+        "longitude": 15.858948
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=39.617406%2C15.858948",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Belvedere Marittimo"
+        },
+        {
+          "@type": "City",
+          "name": "Saracena"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Provincia di Cosenza"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Gaetano Grosso",
+        "honorificPrefix": "Dott.",
+        "jobTitle": "Medico chirurgo, specialista in Cardiologia e Nefrologia",
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Università di Pisa"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Università Federico II di Napoli"
+          }
+        ]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "15:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Visita cardiologica con elettrocardiogramma"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "Ecocardiogramma color-Doppler"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "Ecocolordoppler dei tronchi sovraortici"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "Monitoraggio Holter elettrocardiografico e pressorio"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Visita cardiologica di controllo"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Certificazione per attività sportiva non agonistica"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dottorgaetanogrosso.it/#domande",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Serve l’impegnativa del medico di famiglia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Lo studio è privato e le prestazioni non sono erogate in convenzione con il Servizio sanitario nazionale: l’impegnativa non è necessaria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando viene consegnato il referto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al termine della visita, in copia cartacea, e illustrato al paziente. Fa eccezione il monitoraggio Holter, refertato nei giorni successivi alla registrazione. Su richiesta il referto può essere trasmesso anche al medico curante."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Che cosa occorre portare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La documentazione medica in proprio possesso, anche in copia, e l’elenco aggiornato dei farmaci assunti con i relativi dosaggi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È possibile farsi accompagnare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. In presenza di difficoltà motorie, di deficit uditivi o di terapie complesse è anzi consigliabile la presenza di un familiare o di chi assiste il paziente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come si disdice un appuntamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Telefonando allo studio con almeno 24 ore di anticipo, così da rendere disponibile il posto ad altri pazienti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lo studio è accessibile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. Lo studio di Belvedere Marittimo si trova al piano terra, senza barriere architettoniche, con parcheggio gratuito nelle immediate vicinanze."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
