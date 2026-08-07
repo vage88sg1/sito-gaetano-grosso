@@ -268,9 +268,12 @@
     transition:border-color .12s ease-out}
   .mappa:hover{border-color:var(--accent)}
   .mappa img{display:block;width:100%;height:auto}
-  .mappa-cred{display:block;font-size:14px;color:var(--text-muted);
-    padding:10px var(--space-4);border-top:1px solid var(--line-strong)}
-  .mappa:hover .mappa-cred{color:var(--accent-dark)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .mappa-foot{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+    gap:6px var(--space-3);padding:12px var(--space-4);border-top:1px solid var(--line-strong)}
+  .mappa-azione{font-size:17px;font-weight:500;color:var(--accent-dark)}
+  .mappa:hover .mappa-azione{text-decoration:underline;text-underline-offset:3px}
+  .mappa-cred{font-size:13px;color:var(--text-muted)}
   /* Mappa a caricamento su richiesta: nessuna chiamata a Google prima del clic */
   .mappa{border:1px solid var(--line-strong);background:var(--bg-band);margin:var(--space-3) 0;
     min-height:240px;padding:var(--space-4);display:flex;flex-direction:column;
@@ -673,20 +676,26 @@
             <h3>Belvedere Marittimo</h3>
             <p class="v">Via Sant’Antonio 20 — 87021 Belvedere Marittimo (CS)</p>
             <p>Studi Medici, piano terra: nessuna barriera architettonica. Parcheggio gratuito.</p>
-            <a class="mappa" href="https://www.google.com/maps/search/?api=1&amp;query=39.617406%2C15.858948">
+            <a class="mappa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=39.617406%2C15.858948">
               <img src="assets/img/mappa-belvedere.jpg" width="760" height="420" loading="lazy"
                    alt="Mappa della zona dello studio di Belvedere Marittimo, con il punto della sede">
-              <span class="mappa-cred">Mappa &copy; OpenStreetMap &middot; apri le indicazioni stradali</span>
+              <span class="mappa-foot">
+                <span class="mappa-azione">Apri le indicazioni stradali <span aria-hidden="true">&#8599;</span><span class="sr">(si apre in una nuova scheda)</span></span>
+                <span class="mappa-cred">Mappa &copy; OpenStreetMap</span>
+              </span>
             </a>
           </div>
           <div class="sede">
             <h3>Saracena</h3>
             <p class="v">Via Santa Maria Maddalena 36 — 87010 Saracena (CS)</p>
             <p>Il Dott. Grosso riceve anche presso lo Studio Laurito. I giorni di visita sono fissati direttamente dallo studio: per prenotare telefonare allo <a href="tel:+390981349369">0981 349369</a>, martedì 9:00–12:00 e mercoledì 15:30–18:00.</p>
-            <a class="mappa" href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Santa%20Maria%20Maddalena%2036%2C%2087010%20Saracena%20CS">
+            <a class="mappa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Santa%20Maria%20Maddalena%2036%2C%2087010%20Saracena%20CS">
               <img src="assets/img/mappa-saracena.jpg" width="760" height="420" loading="lazy"
                    alt="Mappa della zona dello studio di Saracena, con il punto della sede">
-              <span class="mappa-cred">Mappa &copy; OpenStreetMap &middot; apri le indicazioni stradali</span>
+              <span class="mappa-foot">
+                <span class="mappa-azione">Apri le indicazioni stradali <span aria-hidden="true">&#8599;</span><span class="sr">(si apre in una nuova scheda)</span></span>
+                <span class="mappa-cred">Mappa &copy; OpenStreetMap</span>
+              </span>
             </a>
           </div>
         </div>
