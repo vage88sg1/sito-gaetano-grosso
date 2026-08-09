@@ -258,7 +258,7 @@
   .faq-item p{color:var(--text-secondary);max-width:70ch}
 
   /* ——— CONTATTI: due pannelli d'azione, orari in tabella, indirizzo e mappa ——— */
-  .contact-panels{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+  .contact-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
   .panel{background:var(--bg-card);border:1px solid var(--line-strong);padding:var(--space-5);
     display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start}
   .panel .v{font-family:var(--font-mono);font-size:26px;font-variant-numeric:tabular-nums;
@@ -324,6 +324,8 @@
   /* ——— RESPONSIVE — breakpoint 1200 / 900 / 600 ——— */
   @media (max-width:1199px){
     :root{--fs-hero:42px}
+    /* tre pannelli su una riga stanno stretti sotto i 1200: il terzo va a capo */
+    .contact-panels{grid-template-columns:repeat(2,1fr)}
   }
   @media (max-width:899px){
     :root{--pad-x:32px;--fs-hero:36px;--fs-h2:30px;--space-8:72px}
@@ -427,7 +429,12 @@
       <a class="phone-item" href="tel:+393358435336">
         <span class="meta meta-muted">Cellulare</span>
         <span class="v">335 8435336</span>
-        <span class="hint">Lun&ndash;Ven 15:30&ndash;19:30 &middot; risponde il dottore</span>
+        <span class="hint">Lun&ndash;Ven 15:30&ndash;19:30</span>
+      </a>
+      <a class="phone-item" href="tel:+393395052570">
+        <span class="meta meta-muted">Secondo cellulare</span>
+        <span class="v">339 5052570</span>
+        <span class="hint">Lun&ndash;Ven 15:30&ndash;19:30</span>
       </a>
     </div>
   </div>
@@ -667,8 +674,14 @@
         <div class="panel">
           <span class="meta meta-muted">Cellulare</span>
           <span class="v">335 8435336</span>
-          <p class="hint">Lunedì–Venerdì 15:30–19:30. Risponde direttamente il dottore.</p>
-          <a class="btn btn-primary" href="tel:+393358435336">Chiama il cellulare</a>
+          <p class="hint">Lunedì–Venerdì 15:30–19:30.</p>
+          <a class="btn btn-primary" href="tel:+393358435336">Chiama questo numero</a>
+        </div>
+        <div class="panel">
+          <span class="meta meta-muted">Secondo cellulare</span>
+          <span class="v">339 5052570</span>
+          <p class="hint">Lunedì–Venerdì 15:30–19:30.</p>
+          <a class="btn btn-primary" href="tel:+393395052570">Chiama questo numero</a>
         </div>
       </div>
 
@@ -754,6 +767,7 @@
         <ul class="tabular">
           <li><a href="tel:+39098582500">0985 82500</a></li>
           <li><a href="tel:+393358435336">335 8435336</a></li>
+          <li><a href="tel:+393395052570">339 5052570</a></li>
           <li><a href="mailto:gaetanogrosso@yahoo.it">gaetanogrosso@yahoo.it</a></li>
         </ul>
       </div>
@@ -812,6 +826,10 @@
       "currenciesAccepted": "EUR",
       "telephone": "+39 0985 82500",
       "email": "gaetanogrosso@yahoo.it",
+      "contactPoint": [
+        { "@type": "ContactPoint", "telephone": "+39 335 8435336", "contactType": "reservations" },
+        { "@type": "ContactPoint", "telephone": "+39 339 5052570", "contactType": "reservations" }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Sant'Antonio 20",
